@@ -1,1 +1,1 @@
-# cricket-score-predictiom
+this is a regresiion problem .In the problem i have predic the final score and the input parameters are bolwer name,batsman name,over ,run after 5 over,wicket after 5 over ground etc.I use all predifine regression algorithms like linear regression,decision tree regression , random forest regression ,support vector machine regression ,lesso regression,ridge regression . Before making any model i have to do many data prepocressing like onehot encoding,handling missing values etc.
