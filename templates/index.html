@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      body {
+        background-image: url(../static/IPL-Trophy-1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 223%;
+      }
+      header h1 {
+        font-size: 50px;
+        text-align: center;
+        border: 5px solid black;
+
+        margin: 20px;
+      }
+      .box {
+        align-items : center;
+        border-radius: 10px;
+        border: 0;
+        text-align: center;
+        margin-bottom: 15px;
+        }
+    </style>
+    <title>IPL FIRST INNINGS SCORE PREDICTION</title>
+
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align:center">Ipl First Innings Score Prediction</h1>
+    </header>
+
+    <div class="box">
+      <form action="{{ url_for('prediction') }}" method="POST">
+        <input style="text-align:center" type="text" name="runs" placeholder="enter the run"><br>
+        <input style="text-align:center" type="text" name="wicket" placeholder="enter the wicket"><br>
+        <input style="text-align:center" type="text" name="overs" placeholder="overs (>=5.0)"><br>
+        <input style="text-align:center" type="text" name="runs_last_5" placeholder="run scored in last 5 over"><br>
+        <input style="text-align:center" type="text" name="wickets_last_5" placeholder="wickets taken in last 5 over"><br>
+
+        <select  class="form-input align-center" name="venue">
+            <option value="none">--- Select the stadium ---</option>
+            <option value="M Chinnaswamy Stadium">M Chinnaswamy Stadium</option>
+            <option value="Punjab Cricket Association Stadium,Mohali">Punjab Cricket Association Stadium,Mohali</option>
+            <option value="Feroz Shah Kotla">Feroz Shah Kotla</option>
+            <option value="Wankhede Stadium">Wankhede Stadium</option>
+            <option value="Sawai Mansingh Stadium">Sawai Mansingh Stadium</option>
+            <option value="MA Chidambaram Stadium, Chepauk">MA Chidambaram Stadium, Chepauk</option>
+            <option value="Eden Gardens">Eden Gardens</option>
+            <option value="Dr DY Patil Sports Academy">Dr DY Patil Sports Academy</option>
+            <option value="Newlands">Newlands</option>
+            <option value="St George's Park">St George's Park</option>
+            <option value="Kingsmead">Kingsmead</option>
+            <option value="SuperSport Park">SuperSport Park</option>
+            <option value="Buffalo Park">Buffalo Park</option>
+            <option value="New Wanderers Stadium">New Wanderers Stadium</option>
+            <option value="De Beers Diamond Oval">De Beers Diamond Ovalk</option>
+            <option value="OUTsurance Oval">OUTsurance Oval</option>
+            <option value="Brabourne Stadium">Brabourne Stadium</option>
+            <option value="Sardar Patel Stadium, Motera">Sardar Patel Stadium, Motera</option>
+            <option value="Himachal Pradesh Cricket Association Stadium">Himachal Pradesh Cricket Association Stadium</option>
+            <option value="Subrata Roy Sahara Stadium">Subrata Roy Sahara Stadium</option>
+            <option value="Rajiv Gandhi International Stadium, Uppal">Rajiv Gandhi International Stadium, Uppal</option>
+            <option value="Shaheed Veer Narayan Singh International Stadium">Shaheed Veer Narayan Singh International Stadium</option>
+            <option value="JSCA International Stadium Complex">JSCA International Stadium Complex</option>
+            <option value="Sheikh Zayed Stadium">Sheikh Zayed Stadium</option>
+            <option value="Sharjah Cricket Stadium">Sharjah Cricket Stadium</option>
+            <option value="Dubai International Cricket Stadium">Dubai International Cricket Stadium</option>
+            <option value="Barabati Stadium">Barabati Stadium</option>
+            <option value="Maharashtra Cricket Association Stadium">Maharashtra Cricket Association Stadium</option>
+            <option value="Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium">Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+            <option value="Punjab Cricket Association IS Bindra Stadium, Mohali">Punjab Cricket Association IS Bindra Stadium, Mohali</option>
+            <option value="Holkar Cricket Stadium">Holkar Cricket Stadium</option>
+          </select><br>
+
+      <select class="form-input align-center" name="batting-team">
+          <option style="text-align:center" value="none">--- Select a Batting team ---</option>
+          <option value="Mumbai Indians">Mumbai Indians</option>
+          <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+          <option value="Chennai Super Kings">Chennai Super Kings</option>
+          <option value="Rajasthan Royals">Rajasthan Royals</option>
+          <option value="Kings XI Punjab">Kings XI Punjab</option>
+          <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+          <option value="Delhi Daredevils">Delhi Daredevils</option>
+          <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+      </select><br>
+      <!-- Bowling Team Dropdown -->
+      <select class="form-input align-center" name="bowling-team">
+          <option value="none">--- Select a Bowling team ---</option>
+          <option value="Mumbai Indians">Mumbai Indians</option>
+          <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+          <option value="Chennai Super Kings">Chennai Super Kings</option>
+          <option value="Rajasthan Royals">Rajasthan Royals</option>
+          <option value="Kings XI Punjab">Kings XI Punjab</option>
+          <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+          <option value="Delhi Daredevils">Delhi Daredevils</option>
+          <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+      </select>
+      <br><br>
+      <input type="submit"  value="pradicted score">
+      <form>
+    </div>
+  </body>
+</html>

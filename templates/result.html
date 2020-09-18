@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <style media="screen">
+    body {
+      background-color: yellow;
+      background-repeat: no-repeat;
+      background-size: 100% 300%;
+    }
+    header h1 {
+      font-size: 50px;
+      text-align: center;
+      border: 5px solid black;
+
+      margin: 20px;
+    }
+    .results{
+      font-size: 30px;
+      text-align: center;
+      border: 5px solid black;
+      margin: 20px;
+    }
+  </style>
+  <title>IPL FIRST INNINGS SCORE PREDICTION</title>
+
+</head>
+  <body>
+    <header>
+      <h1 style="text-align:center">Ipl First Innings Score Prediction</h1>
+    </header>
+    <div  class="results">
+      <p style="text-align:center" class='result-p'>The final predicted score (range): {{ lower_limit }} to {{ upper_limit }}</p>
+    </div>
+  </body>
+</html>
